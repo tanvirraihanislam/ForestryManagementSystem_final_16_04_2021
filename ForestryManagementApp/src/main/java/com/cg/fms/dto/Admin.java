@@ -29,8 +29,8 @@ public class Admin {
 	@OneToMany(mappedBy = "admin")
 	private Set<Contract> contract;
 	
-	@OneToMany(mappedBy = "admin")
-	private Set<Customer> customer;
+//	@OneToMany(mappedBy = "admin")
+//	private Set<Customer> customer;
 
 	
 	
@@ -95,22 +95,26 @@ public class Admin {
 	public void setContract(Set<Contract> contract) {
 		this.contract = contract;
 	}
-	
-	public Set<Customer> getCustomer() {
-		return customer;
-	}
 
-	@JsonIgnore
-	public void setCustomer(Set<Customer> customer) {
-		this.customer = customer;
-	}
+
+
 
 	@Override
 	public String toString() {
 		return "Admin [adminId=" + adminId + ", adminName=" + adminName + ", adminPassword=" + adminPassword
-				+ ", contract=" + contract + ", customer=" + customer + "]";
+				+ ", contract=" + contract + "]";
 	}
 	
+//	public Set<Customer> getCustomer() {
+//		return customer;
+//	}
+//
+//	@JsonIgnore
+//	public void setCustomer(Set<Customer> customer) {
+//		this.customer = customer;
+//	}
+
+
 	
 
 

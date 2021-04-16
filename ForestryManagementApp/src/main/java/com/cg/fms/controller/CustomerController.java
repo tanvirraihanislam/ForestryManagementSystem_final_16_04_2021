@@ -84,7 +84,7 @@ public class CustomerController {
 			return "Customer Not found";
 	}
 
-	@PostMapping("{customerId}/{customerName}/{customerType}/{customerPassword}/{customerEmail}/{customerAddress}/{customerTown}/{customerPostalCode}/{customerContact}/{adminId}/{schedulerId}")
+	@PostMapping("addNewCustomer/{customerId}/{customerName}/{customerType}/{customerPassword}/{customerEmail}/{customerAddress}/{customerTown}/{customerPostalCode}/{customerContact}/{adminId}/{schedulerId}")
 	public String addCustomer(@PathVariable("customerId") String customerId,
 			@PathVariable("customerName") String customerName, @PathVariable("customerType") String customerType,
 			@PathVariable("customerPassword") String customerPassword,
