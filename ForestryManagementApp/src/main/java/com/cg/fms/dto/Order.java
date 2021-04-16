@@ -42,7 +42,8 @@ public class Order {
 	private Customer customer;
 
 	
-	@OneToOne(mappedBy = "order")
+	@OneToOne
+	@JoinColumn(name="ProductId")
 	private Product products;
 
 

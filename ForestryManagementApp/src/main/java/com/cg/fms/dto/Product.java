@@ -29,9 +29,8 @@ public class Product {
 	@Column(name="productQuantity",length=20)
 	private String productQuantity;
 	
-	@OneToOne
-    @JsonIgnore
-	@JoinColumn(name = "orderNumber")
+	@OneToOne(mappedBy = "products")
+	@JsonIgnore
 	private Order order;
 
 	public Product() {
